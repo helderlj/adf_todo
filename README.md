@@ -1,3 +1,10 @@
-# adf_todo_list
+## adf_todo_list
 
-A new Flutter project.
+### Projeto de To-do list da Academia Do Flutter.
+---
+Stack: 
+- Sqlite
+- Provider
+
+Status:
+- Em Progresso
