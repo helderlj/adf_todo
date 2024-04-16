@@ -14,6 +14,7 @@ class RegisterPage extends StatelessWidget {
         backgroundColor: Colors.white,
         shadowColor: Colors.grey,
         automaticallyImplyLeading: false,
+        centerTitle: false,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
