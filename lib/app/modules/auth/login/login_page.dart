@@ -1,4 +1,5 @@
 import 'package:adf_todo_list/app/core/ui/components/todo_list_logo.dart';
+import 'package:adf_todo_list/app/core/ui/components/todo_list_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
@@ -27,9 +28,15 @@ class LoginPage extends StatelessWidget {
                       child: Form(
                         child: Column(
                           children: [
-                            TextFormField(),
+                            const SizedBox(height: 20),
+                            TodoListTextField(
+                              label: "Email",
+                            ),
                             const SizedBox(height: 30),
-                            TextFormField(),
+                            TodoListTextField(
+                              label: "Senha",
+                              isPassword: true,
+                            ),
                             const SizedBox(height: 30),
                           ],
                         ),
@@ -45,10 +52,22 @@ class LoginPage extends StatelessWidget {
                             onPressed: () {},
                           ),
                           SizedBox(
+                            height: 50,
                             width: 130,
                             child: ElevatedButton(
                               onPressed: () {},
-                              child: Text("Login"),
+                              child: Text(
+                                "Login",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                              style: ButtonStyle(
+                                shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -85,7 +104,10 @@ class LoginPage extends StatelessWidget {
                                 Text("Não tem uma conta?"),
                                 TextButton(
                                   child: Text("Criar Conta"),
-                                  onPressed: () {},
+                                  onPressed: () => Navigator.pushNamed(
+                                    context,
+                                    "/register",
+                                  ),
                                 ),
                               ],
                             ),
